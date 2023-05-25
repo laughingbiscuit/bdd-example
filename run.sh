@@ -2,6 +2,10 @@
 
 set -e
 
+###
+# TODO: make this a single command... curl https://laughingbiscuit.github.io/bdd | sh
+###
+
 #get framework 
 rm -rf target/
 git clone https://github.com/laughingbiscuit/bdd target/
