@@ -6,11 +6,11 @@ set -e
 rm -rf target/
 git clone https://github.com/laughingbiscuit/bdd target/
 
-sudo apt-get install -y ruby-dev 
-sudo gem install bundler
-
 # merge
 cp -r features/ target/features/
 
+# env
+(cd target && docker build -t blah .)
+
 # run tests
-(cd target/ && bundle install && npm install && sh test.sh)
+docker run -it blah sh test.sh
