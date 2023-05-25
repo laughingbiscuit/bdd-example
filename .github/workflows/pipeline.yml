@@ -28,7 +28,9 @@ jobs:
         run: |
           echo "Starting pipeline"
           sh run.sh
+          pwd
           ls
+          ls result
           cat result/index.html
       - name: Setup Pages
         uses: actions/configure-pages@v3
