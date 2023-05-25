@@ -13,4 +13,4 @@ cp -r features/ target/features/
 (cd target && docker build -t blah .)
 
 # run tests
-docker run -it blah sh test.sh
+docker run -i blah sh test.sh
