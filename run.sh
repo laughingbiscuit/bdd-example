@@ -17,4 +17,4 @@ cp -i -r features/ target/features/
 (cd target && docker build -t blah .)
 
 # run tests
-docker run -v$(pwd)/result:/home/result -i blah sh test.sh
+docker run -v /var/run/docker.sock:/var/run/docker.sock -v$(pwd)/result:/home/result -i blah sh test.sh
